@@ -47,9 +47,9 @@ function registerEmail() {
   let userEmail = document.getElementById("userEmail").value;
   let userPassword = document.getElementById("Password").value;
   
-  set(child("UsersInfo"), 
-     {
-    
+  set(child(db, "UsersInfo"), {
+    User: userEmail,
+    Password: userPassword
   });
 }
 
