@@ -21,10 +21,11 @@
     <!-- <link rel="stylesheet" href="/style.css" /> -->
 
     <!-- The website JavaScript file -->
-    <script src="/script.js" type="module"></script>
+    <!-- <script src="/script.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js"></script>
   </head>
   <body>
-    
     <h1>Cadastre-se</h1>
     
     <div>
@@ -36,6 +37,30 @@
     <div>
       <button type="submit" id="Submit" value="Submit">Submit</button>
     </div>
+    
+    <script>
+      const firebaseConfig = {
+
+        apiKey: "AIzaSyDUvPAVsZYH3RIfTM9dd6vVqvLr4jo2JO4",
+
+        authDomain: "ufabc-agenda.firebaseapp.com",
+
+        databaseURL: "https://ufabc-agenda-default-rtdb.firebaseio.com",
+
+        projectId: "ufabc-agenda",
+
+        storageBucket: "ufabc-agenda.appspot.com",
+
+        messagingSenderId: "113886022929",
+
+        appId: "1:113886022929:web:9719790176c29b143110b0",
+
+        measurementId: "G-ZYWJLMBXNN"
+
+      };
+      firebase.initializeApp(firebaseConfig);
+      document.querySelector("#Submit");
+    </script>
     
   </body>
 </html>

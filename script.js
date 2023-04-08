@@ -1,8 +1,5 @@
-// Import the functions you need from the SDKs you need
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 import { getDatabase, ref, set, child, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-
 
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -33,7 +30,6 @@ const firebaseConfig = {
 
 };
 
-
 // Initialize Firebase
 
 const app = initializeApp(firebaseConfig);
@@ -46,22 +42,24 @@ onValue(ref(db, ".info/connected"), (snap) => {
   }
 });
 
-console.log(document.getElementById("Submit"));
 
-document.getElementById("Submit").addEventListener("click", registerEmail, false);
+const submitButton = document.getElementById("Submit");
+submitButton.addEventListener("click", registerEmail, false);
 
-function registerEmail() {
-  
-  let userEmail = document.getElementById("userEmail").value;
-  let userPassword = document.getElementById("Password").value;
-  
-  console.log(userEmail);
-  console.log(userPassword);
+function registerEmail(event) {  
+  event.preventDefault();
+  const userEmail = document.getElementById("userEmail").value;
+  const userPassword = document.getElementById("Password").value;
   
   const newRef = child(db, "UsersInfo").push(); // cria um novo nó com uma chave única
-  set(newRef, {
+  set(child(db, "UsersInfo"), {
     User: userEmail,
     Password: userPassword
+  }, (error) => {
+    if (error) {
+      console.log("Erro ao registrar usuário no Firebase Realtime Database", error);
+    } else {
+      console.log("Usuário registrado com sucesso no Firebase Realtime Database");
+    }
   });
 }
-
