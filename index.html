@@ -25,7 +25,6 @@
   </head>
   <body>
     <h1>Cadastre-se</h1>
-    
       Email:<input type="text" id="email"/>
       Senha:<input type="password" id="password"/>
       <button id="submit">Submit</button>
@@ -66,8 +65,22 @@
       
       var password = document.getElementById('password');
       
-      var submitButton = document.getElementById('submit');
+      var subButton = document.getElementById('submit');
       
+      function sendData() {
+        set(ref(db, "Users/"+email.split('@')[0]), {
+          Email: email.value,
+          Password: password.value
+        })
+        .then(()=>{
+          alert("Data sent successfully!");
+        })
+        .catch((error)=>{
+          alert("Data not sent. error:"error);
+        });
+      }
+      
+      subButton.addEventListener('click', sendData);
       
     </script>
     
