@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getDatabase, ref, set, child } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+import { getDatabase, ref, set, child, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -40,14 +40,20 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase(app);
 
+onValue(ref(db, ".info/connected"), (snap) => {
+  if (snap.val() === true) {
+    console.log("Firebase inicializado com sucesso");
+  }
+});
+
 document.getElementById("Submit").addEventListener("click", registerEmail, false);
 
-function registerEmail() {
+function registerEmail(zEvent) {
   
   let userEmail = document.getElementById("userEmail").value;
   let userPassword = document.getElementById("Password").value;
   
-  set(child(db, "UsersInfo"), {
+  set(child(db, "UsersInfo/"), {
     User: userEmail,
     Password: userPassword
   });
