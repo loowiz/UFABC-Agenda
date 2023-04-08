@@ -43,15 +43,11 @@ const analytics = getAnalytics(app);
 document.getElementById("Submit").addEventListener("click", registerEmail, false);
 
 function registerEmail() {
-  let myDBConn = app.database().ref();
-  
-  let Users = myDBConn.child("Users");
-  
-  let userEmail = document.getElementById("userEmail");
-  
-  let userPassword = document.getElementById("password");
-  
-  //Users.push({Email: userEmail, Password: userPassword});
-  console.log("Funcionando");
+  app.database().ref("user").set( {
+            Email: document.getElementById("userEmail").value,
+            Password: document.getElementById("Password").value
+        }
+
+    );
 }
 
