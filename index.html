@@ -35,7 +35,7 @@
       Senha: <input type="password" id="Password"/>
     </div>
     <div>
-      <button type="submit" id="Submit" value="Submit">Submit</button>
+      <button id="Submit">Submit</button>
     </div>
     
     <script>
@@ -59,7 +59,12 @@
 
       };
       firebase.initializeApp(firebaseConfig);
-      document.querySelector("#Submit");
+      let firebaseRef = firebase.database.ref('users');
+      document.querySelector("#Submit").addEventListener('click', ()=>{
+        const email = document.getElementById('userEmail').value;
+        const password = document.getElementById('Password').value;
+        firebaseRef.push({Email: email, Password: password});
+      });
     </script>
     
   </body>
