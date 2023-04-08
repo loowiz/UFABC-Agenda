@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
 
@@ -40,8 +40,10 @@ const app = initializeApp(firebaseConfig);
 
 const analytics = getAnalytics(app);
 
+document.getElementById("Submit").addEventListener("click", registerEmail, false);
+
 function registerEmail() {
-  let myDBConn = app.database().ref;
+  let myDBConn = app.database().ref();
   
   let Users = myDBConn.child("Users");
   
@@ -49,6 +51,7 @@ function registerEmail() {
   
   let userPassword = document.getElementById("password");
   
-  Users.push({Email: userEmail, Password: userPassword});
+  //Users.push({Email: userEmail, Password: userPassword});
+  console.log("Funcionando");
 }
 
