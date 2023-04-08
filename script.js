@@ -43,6 +43,12 @@ const analytics = getAnalytics(app);
 function registerEmail() {
   let myDBConn = app.database().ref;
   
-    
+  let Users = myDBConn.child("Users");
+  
+  let userEmail = document.getElementById("userEmail");
+  
+  let userPassword = document.getElementById("password");
+  
+  Users.push({Email: userEmail, Password: userPassword});
 }
 
