@@ -25,6 +25,7 @@
   </head>
   <body>
     <h1>Cadastre-se</h1>
+      Usuário: <input type="text" id="username"/>
       Email:<input type="text" id="email"/>
       Senha:<input type="password" id="password"/>
       <button id="submit">Submit</button>
@@ -61,6 +62,8 @@
       
       const db = getDatabase();
       
+      var user = document.getElementById('username');
+      
       var email = document.getElementById('email');
       
       var password = document.getElementById('password');
@@ -68,7 +71,7 @@
       var subButton = document.getElementById('submit');
       
       function sendData() {
-        set(ref(db, "Users/"+email.split('@')[0]), {
+        set(ref(db, "Users/"+user.value), {
           Email: email.value,
           Password: password.value
         })
@@ -76,7 +79,7 @@
           alert("Data sent successfully!");
         })
         .catch((error)=>{
-          alert("Data not sent. error:"error);
+          alert("Data not sent. error:"+error);
         });
       }
       
