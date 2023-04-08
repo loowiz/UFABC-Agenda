@@ -46,14 +46,20 @@ onValue(ref(db, ".info/connected"), (snap) => {
   }
 });
 
+console.log(document.getElementById("Submit"));
+
 document.getElementById("Submit").addEventListener("click", registerEmail, false);
 
-function registerEmail(zEvent) {
+function registerEmail() {
   
   let userEmail = document.getElementById("userEmail").value;
   let userPassword = document.getElementById("Password").value;
   
-  set(child(db, "UsersInfo/"), {
+  console.log(userEmail);
+  console.log(userPassword);
+  
+  const newRef = child(db, "UsersInfo").push(); // cria um novo nó com uma chave única
+  set(newRef, {
     User: userEmail,
     Password: userPassword
   });
