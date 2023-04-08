@@ -1,34 +1,42 @@
-/*
-  This is your site JavaScript code - you can add interactivity!
-*/
+// Import the functions you need from the SDKs you need
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the steps in the TODO 🚧
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-if (btn) { // Detect clicks on the button
-  btn.onclick = function () {
-    // The 'dipped' class in style.css changes the appearance on click
-    btn.classList.toggle("dipped");
-  };
-}
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 
-// ----- GLITCH STARTER PROJECT HELPER CODE -----
+// Your web app's Firebase configuration
 
-// Open file when the link in the preview is clicked
-let goto = (file, line) => {
-  window.parent.postMessage(
-    { type: "glitch/go-to-line", payload: { filePath: file, line: line } }, "*"
-  );
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyDUvPAVsZYH3RIfTM9dd6vVqvLr4jo2JO4",
+
+  authDomain: "ufabc-agenda.firebaseapp.com",
+
+  databaseURL: "https://ufabc-agenda-default-rtdb.firebaseio.com",
+
+  projectId: "ufabc-agenda",
+
+  storageBucket: "ufabc-agenda.appspot.com",
+
+  messagingSenderId: "113886022929",
+
+  appId: "1:113886022929:web:9719790176c29b143110b0",
+
+  measurementId: "G-ZYWJLMBXNN"
+
 };
-// Get the file opening button from its class name
-const filer = document.querySelectorAll(".fileopener");
-filer.forEach((f) => {
-  f.onclick = () => { goto(f.dataset.file, f.dataset.line); };
-});
+
+
+// Initialize Firebase
+
+const app = initializeApp(firebaseConfig);
+
+const analytics = getAnalytics(app);
+
