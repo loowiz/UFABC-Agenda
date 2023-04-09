@@ -150,6 +150,7 @@ html, body {
 	width: 400px;
 	border-radius: 22px;
 	margin-top: 10px;
+  margin-right: 10px;
 }
 
 .focus_event_1 li {
