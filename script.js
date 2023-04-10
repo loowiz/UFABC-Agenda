@@ -6,6 +6,15 @@ import { getDatabase, ref, set, child, onValue } from "https://www.gstatic.com/f
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 
+/*
+Google Calendar API credentials
+
+API Key: "AIzaSyAEd1uu930KSQvblLsUi8Ohnsx0gMIfqrk"
+
+OAuth credentials: {"web":{"client_id":"1046944318018-j35902kt8rfu6nn0sadvfu53fdcsjl8i.apps.googleusercontent.com","project_id":"wide-dryad-383312","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","javascript_origins":["https://glitch.com","https://ufabc-agenda.glitch.me"]}}
+*/
+
+
 // Your web app's Firebase configuration
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional

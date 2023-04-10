@@ -21,3 +21,11 @@ body {
   border-radius: 10px;
   margin: auto; 
 }
+
+.center img {
+  max-width: 40%;
+}
+
+.center > .logo {
+  margin:auto;
+}
