@@ -28,22 +28,5 @@
         </div>
       </form>
   </div>
-  
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <div id="g_id_onload"
-       data-client_id="1046944318018-j35902kt8rfu6nn0sadvfu53fdcsjl8i.apps.googleusercontent.com"
-       data-callback="handleCredentialResponse">
-  </div>
-  <div class="g_id_signin" data-type="standard"></div>
-  <script>
-    function handleCredentialResponse(googleUser) {
-      console.log(googleUser.getId())
-      // var profile = googleUser.getBasicProfile();
-      // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-      // console.log('Name: ' + profile.getName());
-      // console.log('Image URL: ' + profile.getImageUrl());
-      // console.log('Email: ' + profile.getEmail());
-    }
-  </script>
 </body>
 </html>
