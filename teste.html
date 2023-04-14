@@ -1,171 +1,7 @@
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>UFABC Agenda</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <style>
-      table {
-        border-collapse: collapse;
-        border-radius: 10px;
-        overflow: hidden;
-        width: 100%;
-        border: 2px solid #8bc34a;
-        box-shadow: 5px 5px 5px #888888;
-      }
-
-      td,
-      th {
-        padding: 8px;
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-      }
-
-      th {
-        background-color: #8bc34a;
-        color: white;
-      }
-
-      .today {
-        background-color: #cddc39;
-      }
-
-      tbody td {
-        height: 25px;
-      }
-
-      tr:last-child td {
-        border-bottom: none;
-      }
-
-      td:not(:last-child) {
-        border-right: 1px solid #ddd;
-      }
-    </style>
-  </head>
-  <script>
-  const cells = document.querySelectorAll("td");
-  const textBox = document.querySelector(".text-box");
-
-  cells.forEach(cell => {
-    cell.addEventListener("click", () => {
-      const day = cell.textContent;
-      textBox.innerHTML = `<p>Você selecionou o dia ${day}.</p>`;
-    });
-  });
-</script>
-  <body>
-    <h1>...</h1>
-    <div style="display: flex">
-      <div style="flex: 1">
-        <h2>Abril de 2023</h2>
-        <div class="container">
-          <table>
-            <tr>
-              <th>Domingo</th>
-              <th>Segunda</th>
-              <th>Terça</th>
-              <th>Quarta</th>
-              <th>Quinta</th>
-              <th>Sexta</th>
-              <th>Sábado</th>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>10</td>
-              <td>11</td>
-              <td>12</td>
-              <td>13</td>
-              <td class="today">14</td>
-              <td>15</td>
-            </tr>
-            <tr>
-              <td id="1">16</td>
-              <td>17</td>
-              <td>18</td>
-              <td>19</td>
-              <td>20</td>
-              <td>21</td>
-              <td>22</td>
-            </tr>
-            <tr>
-              <td>23</td>
-              <td>24</td>
-              <td>25</td>
-              <td>26</td>
-              <td>27</td>
-              <td>28</td>
-              <td>29</td>
-            </tr>
-            <tr>
-              <td>30</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-        </div>
-        <div style="text-box">
-          <p>Caixa de texto</p>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
-
-
--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Calendário Abril 2023</title>
+  <title>UFABC Agenda</title>
   <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
@@ -189,19 +25,11 @@
       justify-content: center;
       align-items: center;
     }
-
-    /*table {
-      border-collapse: collapse;
-      margin: 10px;
-      border-radius: 10px;
-      overflow: hidden;
-    }*/
     
     table {
         border-collapse: collapse;
         border-radius: 10px;
         overflow: hidden;
-        /*width: 100%;*/
         border: 2px solid #8bc34a;
         box-shadow: 5px 5px 5px #888888;
       }
@@ -246,13 +74,13 @@
   <div class="container">
     <table>
             <tr>
-              <th>Domingo</th>
-              <th>Segunda</th>
-              <th>Terça</th>
-              <th>Quarta</th>
-              <th>Quinta</th>
-              <th>Sexta</th>
-              <th>Sábado</th>
+              <th>D</th>
+              <th>S</th>
+              <th>T</th>
+              <th>Q</th>
+              <th>Q</th>
+              <th>S</th>
+              <th>S</th>
             </tr>
             <tr>
               <td></td>
