@@ -126,6 +126,7 @@
       }
 
       .text-box {
+        background-color: #f5fff8;
         border: 1px solid #7f9c9b;
         border-radius: 10px;
         padding: 10px;
@@ -188,7 +189,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>1</td>
+            <td data-texto="<strong>adsasdasd</strong> aasdassa">1</td>
           </tr>
           <tr>
             <td>2</td>
@@ -259,7 +260,8 @@
       cells.forEach((cell) => {
         cell.addEventListener("click", () => {
           const day = cell.textContent;
-          textBox.innerHTML = `<p>Eventos do dia ${day}.</p>`;
+          const texto = cell.dataset.texto;
+          textBox.innerHTML = `<p>Eventos do dia ${day}. <br><br> ${texto}</p>`;
         });
       });
       // =================================================
