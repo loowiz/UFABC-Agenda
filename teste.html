@@ -143,22 +143,70 @@
           align-items: center;
         }
       }
+
+      /* Dropdown Button */
+      .dropbtn {
+        background-image: url("https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/menu-img.svg?v=1681056786404");
+        border: none;
+      }
+
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #F8FFF5;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #DEFFD6;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        /*background-color: #3e8e41;*/
+      }
     </style>
   </head>
   <body>
     <header>
-      <img
-        id="img-menu"
-        class="dropbtn"
-        height="32"
-        src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/menu-img.svg?v=1681056786404"
-      />
-
       <div class="dropdown">
+        <img
+          id="img-menu"
+          class="dropbtn"
+          height="32"
+          src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/menu-img.svg?v=1681056786404"
+        />
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="#">Início</a>
+          <a href="#">Perfil</a>
+          <a href="#">Configurações</a>
+          <a href="#">Notificações</a>
+          <a href="#">Fórum</a>
+          <a href="#">Ajuda</a>
+          <a href="#">Contato</a>
         </div>
       </div>
 
