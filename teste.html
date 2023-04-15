@@ -50,6 +50,14 @@
 
       #news-text {
         text-align: center;
+        font-size: 14px;
+        color: #777;
+      }
+
+      #news-text a {
+        color: #008080;
+        font-weight: bold;
+        text-decoration: none;
       }
 
       .bottom-box {
@@ -249,16 +257,16 @@
       const textoDiv = document.querySelector("#news-text");
 
       const listaTextos = [
-        "<strong\>06/04\</strong\> UFABC volta a realizar Colação de Grau presencial",
-        "UFABC oferece curso de preparação para competições de matemática...",
-        "UFABC e UNIFFAL-MG firmam convênio inédito de mobilidade acadêmica...",
-        "UFABC e prefeitura de Diadema reforçam parceria e ampliam atividades...",
+        '<strong>06/04</strong> UFABC volta a realizar Colação de Grau presencial. <a href="https://www.ufabc.edu.br/noticias/ufabc-volta-a-realizar-colacao-de-grau-presencial" target="_blank">saiba mais</a>',
+        '<strong>29/03</strong> UFABC oferece curso de preparação para competições de matemática <small>...</small> <a href="https://www.ufabc.edu.br/noticias/ufabc-oferece-curso-de-preparacao-para-competicoes-de-matematica-para-estudantes-de-ensino-fundamental-e-medio" target="_blank">saiba mais</a>',
+        '<strong>05/04</strong> UFABC e UNIFFAL-MG firmam convênio inédito de mobilidade acadêmica <small>...</small> <a href="https://www.ufabc.edu.br/noticias/ufabc-e-unifal-mg-firmam-convenio-inedito-de-mobilidade-academica-a-egressos-do-bacharelado-interdisciplinar-em-ciencia-e-tecnologia" target="_blank">saiba mais</a>',
+        '<strong>28/03</strong> UFABC e prefeitura de Diadema reforçam parceria e ampliam atividades <small>...</small> <a href="https://www.ufabc.edu.br/noticias/ufabc-e-prefeitura-de-diadema-reforcam-parceria-e-ampliam-atividades-conjuntas" target="_blank">saiba mais</a>',
       ];
 
       let indexTexto = 0;
 
       function exibirProximoTexto() {
-        textoDiv.textContent = listaTextos[indexTexto];
+        textoDiv.innerHTML = listaTextos[indexTexto];
         indexTexto = (indexTexto + 1) % listaTextos.length;
       }
 
