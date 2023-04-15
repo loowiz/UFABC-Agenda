@@ -1,77 +1,51 @@
 <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <link href="style.css" rel="stylesheet" />
-    <title>Cadastre-se</title>
-  </head>
-  <body>
-    <h1>Cadastre-se</h1>
-      Usuário: <input type="text" id="username"/>
-      Email:<input type="text" id="email"/>
-      Senha:<input type="password" id="password"/>
-      <button id="submit">Submit</button>
-    
-      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=NjgzNTA1Njg2NzBiZjdiMTRhZGU3NzcxYmM2NDI5MTYyYmMwY2UyYzM4NjRkMThjYjFjMWJiOWM5MjQyNDRjYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    
-    <script type="module">
-      
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-      
-      import { getDatabase, ref, child, set, get, update, remove } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style_login.css" rel="stylesheet" />
 
-      const firebaseConfig = {
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100&family=Inter:wght@600&display=swap" rel="stylesheet">
 
-        apiKey: "AIzaSyDUvPAVsZYH3RIfTM9dd6vVqvLr4jo2JO4",
+	<title>Login - UFABCAgenda</title>
+</head>
+  
+<body>
+    <div class="center">
+      <div class="logo">
+        <img src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/Captura_de_tela_de_2023-04-10_09-15-19-removebg-preview.png?v=1681129145938"/><!--logo-central-->
+      </div>
+      <form>
+        <div class="login">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd">
+        </div>
+      </form>
+  </div>
+  
+  <div id="g_id_onload"
+     data-client_id="1046944318018-j35902kt8rfu6nn0sadvfu53fdcsjl8i.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-callback="handleCredential"
+     data-auto_prompt="false">
+  </div>
 
-        authDomain: "ufabc-agenda.firebaseapp.com",
-
-        databaseURL: "https://ufabc-agenda-default-rtdb.firebaseio.com",
-
-        projectId: "ufabc-agenda",
-
-        storageBucket: "ufabc-agenda.appspot.com",
-
-        messagingSenderId: "113886022929",
-
-        appId: "1:113886022929:web:9719790176c29b143110b0",
-
-        measurementId: "G-ZYWJLMBXNN"
-
-      };
-
-      // Initialize Firebase
-
-      const app = initializeApp(firebaseConfig);
-      
-      const db = getDatabase();
-      
-      var user = document.getElementById('username');
-      
-      var email = document.getElementById('email');
-      
-      var password = document.getElementById('password');
-      
-      var subButton = document.getElementById('submit');
-      
-      function sendData() {
-        set(ref(db, "Users/"+user.value), {
-          Email: email.value,
-          Password: password.value
-        })
-        .then(()=>{
-          alert("Data sent successfully!");
-        })
-        .catch((error)=>{
-          alert("Data not sent. error:"+error);
-        });
-      }
-      
-      subButton.addEventListener('click', sendData);
-      
-    </script>
-    
-  </body>
+  <div class="g_id_signin"
+     data-type="standard"
+     data-shape="pill"
+     data-theme="filled_blue"
+     data-text="signin_with"
+     data-size="large"
+     data-locale="pt-BR"
+     data-logo_alignment="left">
+  </div>
+  
+</body>
 </html>

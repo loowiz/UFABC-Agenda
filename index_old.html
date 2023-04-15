@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Cadastre-se</title>
+  </head>
+  <body>
+    <h1>Cadastre-se</h1>
+      Usuário: <input type="text" id="username"/>
+      Email:<input type="text" id="email"/>
+      Senha:<input type="password" id="password"/>
+      <button id="submit">Submit</button>
+    
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=NjgzNTA1Njg2NzBiZjdiMTRhZGU3NzcxYmM2NDI5MTYyYmMwY2UyYzM4NjRkMThjYjFjMWJiOWM5MjQyNDRjYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    
+    <script type="module">
+      
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      
+      import { getDatabase, ref, child, set, get, update, remove } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+      const firebaseConfig = {
+
+        apiKey: "AIzaSyDUvPAVsZYH3RIfTM9dd6vVqvLr4jo2JO4",
+
+        authDomain: "ufabc-agenda.firebaseapp.com",
+
+        databaseURL: "https://ufabc-agenda-default-rtdb.firebaseio.com",
+
+        projectId: "ufabc-agenda",
+
+        storageBucket: "ufabc-agenda.appspot.com",
+
+        messagingSenderId: "113886022929",
+
+        appId: "1:113886022929:web:9719790176c29b143110b0",
+
+        measurementId: "G-ZYWJLMBXNN"
+
+      };
+
+      // Initialize Firebase
+
+      const app = initializeApp(firebaseConfig);
+      
+      const db = getDatabase();
+      
+      var user = document.getElementById('username');
+      
+      var email = document.getElementById('email');
+      
+      var password = document.getElementById('password');
+      
+      var subButton = document.getElementById('submit');
+      
+      function sendData() {
+        set(ref(db, "Users/"+user.value), {
+          Email: email.value,
+          Password: password.value
+        })
+        .then(()=>{
+          alert("Data sent successfully!");
+        })
+        .catch((error)=>{
+          alert("Data not sent. error:"+error);
+        });
+      }
+      
+      subButton.addEventListener('click', sendData);
+      
+    </script>
+    
+  </body>
+</html>
