@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>UFABC Agenda</title>
-  <link
+  <head>
+    <title>UFABC Agenda</title>
+    <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
+      header {
+        background-color: #F5FFF8;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      }
+      
+      #img-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    table {
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      table {
         border-collapse: collapse;
         border-radius: 10px;
         overflow: hidden;
         border: 2px solid #8bc34a;
         box-shadow: 5px 5px 5px #888888;
       }
-    
-    
-    td,
+
+      td,
       th {
         padding: 8px;
         text-align: center;
@@ -47,115 +57,119 @@
         background-color: #8bc34a;
         color: white;
       }
-   
 
-    td:not(:empty):hover {
-      background-color: #7AAC41;
-    }
-
-    .text-box {
-      border: 1px solid #7F9C9B;
-      border-radius: 10px;
-      padding: 10px;
-      margin: 10px;
-      min-height: 80px;
-      width: 250px;
-    }
-
-    @media screen and (max-width: 600px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
+      td:not(:empty):hover {
+        background-color: #7aac41;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>  </header>
-  <div class="container">
-    <table>
-            <tr>
-              <th>D</th>
-              <th>S</th>
-              <th>T</th>
-              <th>Q</th>
-              <th>Q</th>
-              <th>S</th>
-              <th>S</th>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>10</td>
-              <td>11</td>
-              <td>12</td>
-              <td>13</td>
-              <td class="today">14</td>
-              <td>15</td>
-            </tr>
-            <tr>
-              <td id="1">16</td>
-              <td>17</td>
-              <td>18</td>
-              <td>19</td>
-              <td>20</td>
-              <td>21</td>
-              <td>22</td>
-            </tr>
-            <tr>
-              <td>23</td>
-              <td>24</td>
-              <td>25</td>
-              <td>26</td>
-              <td>27</td>
-              <td>28</td>
-              <td>29</td>
-            </tr>
-            <tr>
-              <td>30</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
 
-    <div class="text-box">
-      <p><strong>HOJE</strong></p>
-      <br><br><br>
-      <p>Selecione uma data do calendário.</p>
+      .text-box {
+        border: 1px solid #7f9c9b;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        min-height: 80px;
+        width: 250px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    
+    <img class="img-logo" height="48" src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/Captura_de_tela_de_2023-04-10_09-15-19-removebg-preview.png?v=1681129145938">
+    
+    
+    </header>
+    <div class="container">
+      <table>
+        <tr>
+          <th>D</th>
+          <th>S</th>
+          <th>T</th>
+          <th>Q</th>
+          <th>Q</th>
+          <th>S</th>
+          <th>S</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td class="today">14</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td id="1">16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="text-box">
+        <p><strong>HOJE</strong></p>
+        <br /><br /><br />
+        <p>Selecione uma data do calendário.</p>
+      </div>
     </div>
-  </div>
 
-  <script>
-    const cells = document.querySelectorAll("td");
-    const textBox = document.querySelector(".text-box");
+    <script>
+      const cells = document.querySelectorAll("td");
+      const textBox = document.querySelector(".text-box");
 
-    cells.forEach(cell => {
-      cell.addEventListener("click", () => {
-        const day = cell.textContent;
-        textBox.innerHTML = `<p>Eventos do dia ${day}.</p>`;
+      cells.forEach((cell) => {
+        cell.addEventListener("click", () => {
+          const day = cell.textContent;
+          textBox.innerHTML = `<p>Eventos do dia ${day}.</p>`;
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
