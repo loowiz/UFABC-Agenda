@@ -42,10 +42,28 @@
         background-color: #f5fff8;
         border-radius: 10px;
         margin-top: 20px;
-        padding: 20px;
+        padding: 10px;
         border: 1px solid #deffd6;
         margin-left: 10px;
         margin-right: 10px;
+      }
+
+      #news-text {
+        text-align: center;
+      }
+
+      .bottom-box {
+        background-color: #f5fff8;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #deffd6;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      #bottom-text {
+        text-align: center;
       }
 
       body {
@@ -128,6 +146,8 @@
       <p id="news-text"></p>
     </div>
 
+    <section>&nbsp;</section>
+
     <div class="container">
       <table>
         <tr>
@@ -202,7 +222,14 @@
       </div>
     </div>
 
+    <div class="bottom-box">
+      <p id="bottom-text">&copy; 2023 UFABC Agenda.</p>
+    </div>
+
     <script>
+      // =================================================
+      // Exibe o conteúdo dos dias com algum evento
+      // =================================================
       const cells = document.querySelectorAll("td");
       const textBox = document.querySelector(".text-box");
 
@@ -212,11 +239,21 @@
           textBox.innerHTML = `<p>Eventos do dia ${day}.</p>`;
         });
       });
+      // =================================================
 
-      const div = document.querySelector(".minha-div");
-      const textoDiv = document.querySelector("#texto-div");
+      // =================================================
+      // Função para rotacionar texto de notícias:
+      // =================================================
 
-      const listaTextos = ["Texto 1", "Texto 2", "Texto 3", "Texto 4"];
+      const div = document.querySelector(".news-rot");
+      const textoDiv = document.querySelector("#news-text");
+
+      const listaTextos = [
+        "<strong\>06/04\</strong\> UFABC volta a realizar Colação de Grau presencial",
+        "UFABC oferece curso de preparação para competições de matemática...",
+        "UFABC e UNIFFAL-MG firmam convênio inédito de mobilidade acadêmica...",
+        "UFABC e prefeitura de Diadema reforçam parceria e ampliam atividades...",
+      ];
 
       let indexTexto = 0;
 
@@ -228,6 +265,7 @@
       exibirProximoTexto(); // exibe o primeiro texto imediatamente
 
       setInterval(exibirProximoTexto, 5000); // atualiza o texto a cada 5 segundos
+      // =================================================
     </script>
   </body>
 </html>
