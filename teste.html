@@ -19,17 +19,32 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #F5FFF8;
+        background-color: #f5fff8;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
       }
-      
-      #img-logo {
-        margin-left: 0;
+
+      #img-menu {
+        margin-left: 10px;
         margin-right: 0;
       }
-      
+
+      #img-logo {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       #img-login {
         margin-left: 0;
+        margin-right: 10px;
+      }
+
+      .news-rot {
+        background-color: #f5fff8;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #deffd6;
+        margin-left: 10px;
         margin-right: 10px;
       }
 
@@ -88,14 +103,31 @@
   </head>
   <body>
     <header>
-      <img id="img-logo" height="48" src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/Captura_de_tela_de_2023-04-10_09-15-19-removebg-preview.png?v=1681129145938">
-      
-      <img id="img-login" height="29" src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/profile-img.svg?v=1681056787053">
+      <img
+        id="img-menu"
+        height="32"
+        src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/menu-img.svg?v=1681056786404"
+      />
+
+      <img
+        id="img-logo"
+        height="48"
+        src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/Captura_de_tela_de_2023-04-10_09-15-19-removebg-preview.png?v=1681129145938"
+      />
+
+      <img
+        id="img-login"
+        height="29"
+        src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/profile-img.svg?v=1681056787053"
+      />
     </header>
-    
-    <section> &nbsp; </section>
-    
-    
+
+    <section>&nbsp;</section>
+
+    <div class="news-rot">
+      <p id="news-text"></p>
+    </div>
+
     <div class="container">
       <table>
         <tr>
@@ -180,6 +212,22 @@
           textBox.innerHTML = `<p>Eventos do dia ${day}.</p>`;
         });
       });
+
+      const div = document.querySelector(".minha-div");
+      const textoDiv = document.querySelector("#texto-div");
+
+      const listaTextos = ["Texto 1", "Texto 2", "Texto 3", "Texto 4"];
+
+      let indexTexto = 0;
+
+      function exibirProximoTexto() {
+        textoDiv.textContent = listaTextos[indexTexto];
+        indexTexto = (indexTexto + 1) % listaTextos.length;
+      }
+
+      exibirProximoTexto(); // exibe o primeiro texto imediatamente
+
+      setInterval(exibirProximoTexto, 5000); // atualiza o texto a cada 5 segundos
     </script>
   </body>
 </html>
