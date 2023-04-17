@@ -1,3 +1,5 @@
+
+
 // =================================================
 // Exibe o conteúdo dos dias com algum evento
 // =================================================
@@ -8,7 +10,7 @@ cells.forEach((cell) => {
   cell.addEventListener("click", () => {
     const day = cell.textContent;
     const texto = cell.dataset.texto;
-    textBox.innerHTML = `<p>Eventos do dia ${day}. <br><br> ${texto}</p>`;
+    textBox.innerHTML = `<p><strong>Eventos do dia ${day}</strong> <br><br> ${texto}</p>`;
   });
 });
 // =================================================

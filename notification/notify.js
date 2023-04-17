@@ -30,6 +30,7 @@
     // check notification permission
     let granted = false;
 
+    //Setar permissões em notificações.
     if (Notification.permission === 'granted') {
         granted = true;
     } else if (Notification.permission !== 'denied') {

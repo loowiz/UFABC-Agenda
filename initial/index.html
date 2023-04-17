@@ -26,7 +26,7 @@
           <a href="/initial">Início</a>
           <a href="#">Perfil</a>
           <a href="#">Configurações</a>
-          <a href="/notification">Notificações</a>
+          <a href="/notification/index.html">Notificações</a>
           <a href="#">Fórum</a>
           <a href="#">Ajuda</a>
           <a href="#">Contato</a>
@@ -39,11 +39,20 @@
         src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/Captura_de_tela_de_2023-04-10_09-15-19-removebg-preview.png?v=1681129145938"
       />
 
-      <img
+      <div class="dropdown">
+        <img
         id="img-login"
         height="29"
         src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/profile-img.svg?v=1681056787053"
       />
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+      
+      
     </header>
 
     <div class="news-rot">
@@ -52,7 +61,7 @@
 
     <div class="principal">
       <div class="container">
-        <table id='calendar'>
+        <table id="calendar">
           <tr>
             <th>D</th>
             <th>S</th>
@@ -69,14 +78,14 @@
             <td></td>
             <td></td>
             <td></td>
-            <td data-texto="<strong>adsasdasd</strong> aasdassa">1</td>
+            <td data-texto="<strong>Nada marcado para este dia!</strong> :)">1 <br><span class="notdot"></span></td>
           </tr>
           <tr>
-            <td class="holyday">2 <br><span class="notdot"></span></td>
-            <td>3 <br><span class="dot"></span></td>
-            <td>4 <br><span class="dot"></span></td>
-            <td>5 <br><span class="dot"></span></td>
-            <td>6 <br><span class="dot"></span></td>
+            <td class="holyday" data-texto="Domingão! Vá passear!">2 <br><span class="notdot"></span></td>
+            <td data-texto="<strong>adsasdasd</strong> aasdassa">3 <br><span class="notdot"></span></td>
+            <td data-texto="<strong>adsasdasd</strong> aasdassa">4 <br><span class="notdot"></span></td>
+            <td>5 <br><span class="notdot"></span></td>
+            <td>6 <br><span class="notdot"></span></td>
             <td class="holyday">7 <br><span class="notdot"></span></td>
             <td>8 <br><span class="notdot"></span></td>
           </tr>
