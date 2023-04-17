@@ -35,6 +35,22 @@ header {
   background-color: #D6D8CA;
 }
 
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #F92F2F;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.notdot {
+  height: 5px;
+  width: 5px;
+  /*background-color: #F92F2F;*/
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .news-rot {
   background-color: #f5fff8;
   margin-top: 20px;
@@ -61,7 +77,7 @@ header {
 
 .principal {
   background-color: #ffffff;
-  margin-top: 0px;
+  margin: auto;
   padding: 10px;
   border-top: 0px solid #deffd6;
   border-bottom: 0px solid #deffd6;
@@ -71,7 +87,6 @@ header {
 
 .bottom-box {
   background-color: #f5fff8;
-  margin-top: 20px;
   padding: 10px;
   border-top: 1px solid #deffd6;
   border-bottom: 1px solid #deffd6;
@@ -85,13 +100,15 @@ header {
   color: #888;
 }
 
-#calendar {
-  width: 30%;
-  height: 70%;
-}
-
 body {
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .container {
@@ -103,11 +120,13 @@ body {
 
 table {
   background-color: #ffffff;
+  border: 2px solid #8bc34a;
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
-  border: 2px solid #8bc34a;
   box-shadow: 5px 5px 5px #888888;
+  width: 30vw;
+  height: 30vw;
 }
 
 td,
@@ -134,8 +153,8 @@ td:not(:empty):hover {
   padding: 10px;
   margin: 20px;
   min-height: 247px;
-  width: 30%;
-  height: calc(30vh - 100px);
+  width: 30vw;
+  height: 30vw;
   box-shadow: 5px 5px 5px #888888;
 }
 

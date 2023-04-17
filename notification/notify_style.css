@@ -38,8 +38,7 @@ form {
   border: 2px solid #b0cca9;
   border-radius: 10px;
   position: absolute;
-  margin: 0 auto;
-  margin-left: 19%;
+  /*margin-left: 19%;*/
   margin-top: 5%;
 }
 
@@ -47,4 +46,3 @@ input[type=text] {
     margin: 8px 0;
     box-sizing: border-box;
 }
-

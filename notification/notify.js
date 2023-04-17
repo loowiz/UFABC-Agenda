@@ -5,7 +5,7 @@
         // create a new notification
         const notification = new Notification('Prova daqui à uma semana!', {
             body: 'Clique aqui para acessar o Moodle!',
-            icon: './img/js.png'
+            icon: 'moodle_logo.png'
         });
 
         // close the notification after 10 seconds
@@ -15,7 +15,7 @@
 
         // navigate to a URL when clicked
         notification.addEventListener('click', () => {
-
+            //link Moodle
             window.open('https://moodle.ufabc.edu.br/my/', '_blank');
         });
     }
