@@ -14,13 +14,14 @@ body {
 }
 
 .center {
-  width: 80%;
+  width: 60%;
   height: 100%;
   margin: auto;
+  padding: 20px;
 }
 
 .center img {
-  max-width: 40%;
+  max-width: 80%;
 }
 
 .logo {
@@ -38,11 +39,9 @@ form {
   border-radius: 10px;
   position: absolute;
   left: 50%;
-  ri
-  /*
-  margin-left: 19%;
-  margin-top: 5%;
-  */
+  transform:translateX(-50%);
+  margin-top: 80px;
+  max-width: 80%;
 }
 
 input[type=text] {
@@ -53,5 +52,21 @@ input[type=text] {
 
 input[type=button] {
   padding: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  /* Adicione regras de estilo aqui para telas menores que 600px */
+  body {
+    padding: 50px 0;
+  }
+  
+  .center {
+    width: 80%;
+  }
+  
+  form {
+    max-width: 80%;
+    margin-left: 10%;
+  }
 }
 
