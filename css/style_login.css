@@ -17,9 +17,9 @@ body {
 .center {
   width: 50%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid #b0cca9;
   border-radius: 10px;
-  margin: auto; 
+  margin: auto;
 }
 
 .center img {
@@ -32,17 +32,14 @@ body {
 }
 
 form {
-  padding: 15%;
+  max-width: 30%;
   text-align: center;
-}
-
-label{
-   text-align: left;
+  border: 2px solid #b0cca9;
+  border-radius: 20px;
+  position: absolute;
 }
 
 input[type=text] {
     margin: 8px 0;
     box-sizing: border-box;
-    /*border: 1px solid #555;*/
-    /*outline: none;*/
 }
