@@ -11,11 +11,10 @@ html, body {
 
 body {
   background-color: #DEFFD6;
-  padding: 110px 0;
 }
 
 .center {
-  width: 50%;
+  width: 80%;
   height: 100%;
   margin: auto;
 }
@@ -31,7 +30,6 @@ body {
 
 form {
   font-weight: bold;  
-  max-width: 40%;
   padding: 30px;
   text-align: center;
   border-collapse: collapse;
@@ -39,9 +37,12 @@ form {
   border: 2px solid #b0cca9;
   border-radius: 10px;
   position: absolute;
-  margin: 0 auto;
+  left: 50%;
+  ri
+  /*
   margin-left: 19%;
   margin-top: 5%;
+  */
 }
 
 input[type=text] {
@@ -53,3 +54,4 @@ input[type=text] {
 input[type=button] {
   padding: 3px;
 }
+
