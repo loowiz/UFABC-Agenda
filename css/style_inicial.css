@@ -27,6 +27,14 @@ header {
   margin-right: 10px;
 }
 
+.today {
+  background-color: #CDDC39;
+}
+
+.holyday {
+  background-color: #CDDC39;
+}
+
 .news-rot {
   background-color: #f5fff8;
   margin-top: 20px;
