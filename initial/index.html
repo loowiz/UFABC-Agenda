@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>UFABC Agenda</title>
-    <link href="/style_inicial.css" rel="stylesheet" />
+    <link href="/initial/style_inicial.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <script async defer type="text/javascript" src="inicial.js"></script>
+    <script async defer type="text/javascript" src="/initial/inicial.js"></script>
     <header>
       <div class="dropdown">
         <img
@@ -21,10 +21,10 @@
           src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/menu-img.svg?v=1681056786404"
         />
         <div class="dropdown-content">
-          <a href="#">Início</a>
+          <a href="/initial">Início</a>
           <a href="#">Perfil</a>
           <a href="#">Configurações</a>
-          <a href="#">Notificações</a>
+          <a href="/notification">Notificações</a>
           <a href="#">Fórum</a>
           <a href="#">Ajuda</a>
           <a href="#">Contato</a>
@@ -50,7 +50,7 @@
 
     <div class="principal">
       <div class="container">
-        <table>
+        <table id='calendar'>
           <tr>
             <th>D</th>
             <th>S</th>

@@ -85,6 +85,10 @@ header {
   color: #888;
 }
 
+#calendar {
+  width: 70%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -129,7 +133,7 @@ td:not(:empty):hover {
   padding: 10px;
   margin: 20px;
   min-height: 247px;
-  width: 30vw;
+  width: 30%;
   height: calc(30vh - 100px);
   box-shadow: 5px 5px 5px #888888;
 }
