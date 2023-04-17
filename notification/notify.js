@@ -1,16 +1,17 @@
+//test!
 (async () => {
     // create and show the notification
     const showNotification = () => {
         // create a new notification
-        const notification = new Notification('Notificação de Atividade!', {
-            body: 'This is a JavaScript Notification API demo',
+        const notification = new Notification('Prova daqui à uma semana!', {
+            body: 'Clique aqui para acessar o Moodle!',
             icon: './img/js.png'
         });
 
         // close the notification after 10 seconds
         setTimeout(() => {
             notification.close();
-        }, 10 * 1000);
+        }, 15 * 1000);
 
         // navigate to a URL when clicked
         notification.addEventListener('click', () => {
@@ -23,7 +24,7 @@
     const showError = () => {
         const error = document.querySelector('.error');
         error.style.display = 'block';
-        error.textContent = 'You blocked the notifications';
+        error.textContent = 'Notificações desabilitadas.';
     }
 
     // check notification permission
@@ -37,7 +38,7 @@
     }
 
     // show notification or error
-    if (granted == true) showNotification();
+    if (granted === true) showNotification();
     else showError();
 
 })();

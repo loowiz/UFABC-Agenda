@@ -33,12 +33,14 @@ body {
 form {
   max-width: 80%;
   padding: 30px;
-  text-align: center;
+  text-align: center;  
+  border-collapse: collapse;
+  box-shadow: 5px 5px 5px #888888;
   border: 2px solid #b0cca9;
   border-radius: 10px;
   position: absolute;
-  margin-left: 18%;
-  margin-top: 7%;
+  /*margin-left: 19%;*/
+  margin-top: 5%;
 }
 
 input[type=text] {
