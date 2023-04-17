@@ -197,7 +197,6 @@ td:not(:empty):hover {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #deffd6;
-  float: left;
 }
 
 /* Show the dropdown menu on hover */
