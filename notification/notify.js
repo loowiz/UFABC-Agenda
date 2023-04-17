@@ -8,7 +8,7 @@
             icon: 'https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/moodle_logo.png?v=1681734171368'
         });
 
-        // close the notification after 10 seconds
+        // close the notification after 15 seconds
         setTimeout(() => {
             notification.close();
         }, 15 * 1000);

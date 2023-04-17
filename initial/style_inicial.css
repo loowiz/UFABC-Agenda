@@ -36,16 +36,16 @@ header {
 }
 
 .dot {
-  height: 5px;
-  width: 5px;
-  background-color: #f92f2f;
+  height: 8px;
+  width: 8px;
+  background-color: #2880F1;
   border-radius: 50%;
   display: inline-block;
 }
 
 .notdot {
-  height: 5px;
-  width: 5px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -101,7 +101,13 @@ header {
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .container {
