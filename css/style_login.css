@@ -57,17 +57,18 @@ input[type=password] {
 
 input[type=button] {
   position: relative;
-  background-color: #4CAF50;
+  background-color: #6e5651;
   border: none;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #DEFFD6;
   padding: 10px;
-  width: 200px;
+  width: 50%;
   text-align: center;
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 10px;
   /*background-color: #4CAF50; /* Green /*
   border: none;
   color: white;
@@ -77,6 +78,31 @@ input[type=button] {
   font-size: 16px;
   padding: 3px;
   */
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 @media screen and (max-width: 400px) {
