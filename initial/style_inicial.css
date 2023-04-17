@@ -195,7 +195,7 @@ td:not(:empty):hover {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-content a .dropdown-content-r a:hover {
   background-color: #deffd6;
 }
 
@@ -207,4 +207,22 @@ td:not(:empty):hover {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   /*background-color: #3e8e41;*/
+}
+
+.dropdown-content-r {
+  display: none;
+  position: absolute;
+  background-color: #f8fff5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0%;
+}
+
+.dropdown-content-r a:hover {
+  background-color: #deffd6;
+}
+
+.dropdown:hover .dropdown-content-r {
+  display: block;
 }
