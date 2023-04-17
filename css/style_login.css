@@ -55,29 +55,19 @@ input[type=password] {
     padding: 5px;
 }
 
-input[type=button] {
-  position: relative;
+.button {
+  display: inline-block;
+  border-radius: 4px;
   background-color: #6e5651;
   border: none;
-  font-size: 18px;
-  color: #DEFFD6;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 23px;
   padding: 10px;
-  width: 50%;
-  text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
+  width: 160px;
+  transition: all 0.5s;
   cursor: pointer;
-  border-radius: 10px;
-  /*background-color: #4CAF50; /* Green /*
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  padding: 3px;
-  */
+  margin: 5px;
 }
 
 .button span {
@@ -104,7 +94,57 @@ input[type=button] {
   opacity: 1;
   right: 0;
 }
+</style>
+/*
+input[type=button] {
+  position: relative;
+  background-color: #6e5651;
+  border: none;
+  font-size: 18px;
+  color: #DEFFD6;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  /*background-color: #4CAF50; /* Green /*
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  padding: 3px;
+}
 
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+*/
 @media screen and (max-width: 400px) {
   /* Adicione regras de estilo aqui para telas menores que 400px */
   body {
