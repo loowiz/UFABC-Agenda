@@ -2,10 +2,10 @@
 (async () => {
     // create and show the notification
     const showNotification = () => {
-        // create a new notification
+        // TODO: Integrar com o calendario.
         const notification = new Notification('Prova daqui à uma semana!', {
             body: 'Clique aqui para acessar o Moodle!',
-            icon: 'moodle_logo.png'
+            icon: 'https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/moodle_logo.png?v=1681734171368'
         });
 
         // close the notification after 10 seconds

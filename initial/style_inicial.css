@@ -28,17 +28,17 @@ header {
 }
 
 .today {
-  background-color: #CDDC39;
+  background-color: #cddc39;
 }
 
 .holyday {
-  background-color: #D6D8CA;
+  background-color: #d6d8ca;
 }
 
 .dot {
   height: 5px;
   width: 5px;
-  background-color: #F92F2F;
+  background-color: #f92f2f;
   border-radius: 50%;
   display: inline-block;
 }
@@ -46,7 +46,6 @@ header {
 .notdot {
   height: 5px;
   width: 5px;
-  /*background-color: #F92F2F;*/
   border-radius: 50%;
   display: inline-block;
 }
@@ -102,13 +101,7 @@ header {
 
 body {
   font-family: "Roboto", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  margin-top: auto;
+  margin: 0 0;
 }
 
 .container {
