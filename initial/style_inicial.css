@@ -219,7 +219,7 @@ td:not(:empty):hover {
   right: 0%;
 }
 
-.dropdown-content-r a {
+.dropdown-content-r a{
   color: black;
   padding: 12px 16px;
   text-decoration: none;
