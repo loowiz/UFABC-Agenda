@@ -54,14 +54,14 @@ input[type="text"] {
 }
 
 .button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  border: 1px solid #4CAF50;
+  background-color: #1FDB74;
+  padding: 10px 22px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: auto;
   cursor: pointer;
 }
 
@@ -177,7 +177,8 @@ th {
   /*padding: 8px;*/
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-size: 15px;
+  /*font-weight: bold;*/
 }
 
 th {
