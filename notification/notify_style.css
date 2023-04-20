@@ -159,19 +159,22 @@ footer {
 }
 
 table {
+  padding: 10px;
   background-color: #ffffff;
-  border: 2px solid #8bc34a;
-  border-collapse: collapse;
+  border: 1px solid #7f9c9b;
+  /*border-collapse: collapse;*/
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 5px 5px 5px #888888;
-  width: 30vw;
-  height: 30vw;
+  /*box-shadow: 5px 5px 5px #888888;*/
+  width: 40vw;
+  /*height: 30vw;*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 td,
 th {
-  padding: 8px;
+  /*padding: 8px;*/
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -182,9 +185,9 @@ th {
   color: white;
 }
 
-td:not(:empty):hover {
+/*td:not(:empty):hover {
   background-color: #7aac41;
-}
+}*/
 
 .text-box {
   margin-left: auto;
@@ -281,8 +284,8 @@ td:not(:empty):hover {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 50px;
+  height: 24px;
 }
 
 /* Hide default HTML checkbox */
@@ -308,8 +311,8 @@ td:not(:empty):hover {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -318,11 +321,11 @@ td:not(:empty):hover {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #1FDB74;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #1FDB74;
 }
 
 input:checked + .slider:before {
