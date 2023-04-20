@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Notification API</title>
-    <link rel="stylesheet" href="notification/notify_style.css">
-<style>
-      .button {
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-      }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UFABC Agenda - Controle de notificações</title>
+    <link rel="stylesheet" href="notify_style.css" />
+    
+  </head>
+  <header>
+    <div class="dropdown">
+      <img
+        id="img-menu"
+        class="dropbtn"
+        height="32"
+        src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/menu-img.svg?v=1681056786404"
+      />
+      <div class="dropdown-content">
+        <a href="/initial">Início</a>
+        <a href="#">Perfil</a>
+        <a href="#">Configurações</a>
+        <a href="/notification/index.html">Notificações</a>
+        <!--
+          <a href="#">Fórum</a>
+          <a href="#">Ajuda</a>
+          <a href="#">Contato</a>
+          -->
+      </div>
+    </div>
 
-      .button1 {background-color: #4CAF50;} /* Green */
-      .button2 {background-color: #CC0C0A;} /* Red */
-</style>
-</head>
-<body>
+    <img
+      id="img-logo"
+      height="48"
+      src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/Captura_de_tela_de_2023-04-10_09-15-19-removebg-preview.png?v=1681129145938"
+    />
+
+    <div class="dropdown">
+      <img
+        id="img-login"
+        height="29"
+        src="https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/profile-img.svg?v=1681056787053"
+      />
+      <div class="dropdown-content-r">
+        <a href="../index.html">Sair</a>
+        <a href="#">Ajuda</a>
+        <a href="#">Contato</a>
+        <a href="#">Fórum</a>
+      </div>
+    </div>
+  </header>
+
+  <body>
     <div class="container">
-        <h1>Página de notificações.</h1>
-        <div class="error"></div>
+      <h1>Página de notificações.</h1>
+      <div class="error"></div>
     </div>
     <script src="notification/notify.js"></script>
-  
-    <button class="button button1">Permitir</button>
-    <button class="button button2">Bloquear</button>
-</body>
+
+    <button class="button1">Permitir</button>
+    <button class="button2">Bloquear</button>
+  </body>
 <footer>
-  <div class="bottom-box">
-    <p id="bottom-text">&copy; 2023 UFABC Agenda.</p>
-  </div>
-</footer>
+    <div class="bottom-box">
+      <p id="bottom-text">&copy; 2023 UFABC Agenda.</p>
+    </div>
+  </footer>
 </html>
