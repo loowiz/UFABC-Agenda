@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  background-color: #DEFFD6;
+  background-color: #ffffff;/*#DEFFD6;*/
 }
 
 .center {
@@ -29,12 +29,13 @@ body {
 }
 
 form {
+  background-color: #DEFFD6;
   font-weight: bold;  
   padding: 30px;
   text-align: center;
   border-collapse: collapse;
   box-shadow: 5px 5px 5px #888888;
-  border: 2px solid #b0cca9;
+  border: 1px solid #b0cca9;
   border-radius: 10px;
   position: absolute;
   left: 50%;
