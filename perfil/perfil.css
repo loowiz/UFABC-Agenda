@@ -16,11 +16,6 @@ header {
 
 
 
-.text-box {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 .responsive-container {
   display: flex;
@@ -47,6 +42,15 @@ header {
   }
 }
 
+.image-column {
+  flex-basis: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.image-column img {
+  max-width: 100%;
+}
 
 
 
