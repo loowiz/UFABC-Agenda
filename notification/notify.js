@@ -1,14 +1,16 @@
 //test!
+
 function event_check () {
-    const event_type = "/initial.idex.html".getElementById("BCC24");
+    console.log("OK");
+    const event_type = "/initial/index.html".getElementById("BCC24");
     console.log(document);
 
     if (event_type === "BCC24") console.log("OK");
+    else console.log("NOT OK");
 }
 
 (async () => {
     // TODO: Integrar com o calendario.
-    
   
     // create and show the notification
     const showNotification = () => {
