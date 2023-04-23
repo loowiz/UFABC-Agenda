@@ -1,8 +1,12 @@
 //test!
 (async () => {
+    // TODO: Integrar com o calendario.
+    function event_check () {
+          
+    }
+  
     // create and show the notification
     const showNotification = () => {
-        // TODO: Integrar com o calendario.
         const notification = new Notification('Prova daqui à uma semana!', {
             body: 'Clique aqui para acessar o Moodle!',
             icon: 'https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/moodle_logo.png?v=1681734171368'
