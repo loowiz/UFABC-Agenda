@@ -1,13 +1,15 @@
 //test!
 //console.log("OK");
 
+console.log(document);
+/*
 function event_check () {
     //console.log(document);
     const event_type = document.getElementById("BCC24");    
 
     if (event_type === "BCC24") console.log("OK");
     else console.log("NOT OK");
-}
+}*/
 
 (async () => {
   // TODO: Integrar com o calendario.
@@ -18,7 +20,6 @@ function event_check () {
       icon: "https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/moodle_logo.png?v=1681734171368",
     });
 
-    // close the notification after 20 seconds
     setTimeout(() => {
       notification.close();
     }, 20 * 1000);
