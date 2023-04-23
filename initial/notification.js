@@ -1,19 +1,17 @@
 //test!
 //console.log("OK");
 
-/*
 function event_check () {
     //console.log(document);
-    const event_type = "/initial/index.html".getElementById("BCC24");    
+    const event_type = document.getElementById("BCC24");    
 
     if (event_type === "BCC24") console.log("OK");
     else console.log("NOT OK");
-}*/
+}
 
 (async () => {
   // TODO: Integrar com o calendario.
 
-  // create and show the notification
   const showNotification = () => {
     const notification = new Notification("Prova daqui à uma semana!", {
       body: "Clique aqui para acessar o Moodle!",
@@ -39,7 +37,6 @@ function event_check () {
     error.textContent = "Notificações desabilitadas.";
   };
 
-  // check notification permission
   let granted = false;
 
   //Setar permissões em notificações.
@@ -50,7 +47,6 @@ function event_check () {
     granted = permission === "granted" ? true : false;
   }
 
-  // show notification or error
   if (granted === true) showNotification();
   else showError();
 })();
