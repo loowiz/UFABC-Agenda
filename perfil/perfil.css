@@ -12,6 +12,63 @@ header {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+
+
+
+
+.text-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.responsive-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  flex-basis: 100%;
+}
+
+.right-column {
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .left-column {
+    flex-basis: 50%;
+    padding-right: 10px;
+  }
+
+  .right-column {
+    flex-basis: 50%;
+    padding-left: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #img-menu {
   margin-left: 10px;
   margin-right: 0;
