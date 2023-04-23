@@ -10,47 +10,46 @@
 }*/
 
 (async () => {
-    // TODO: Integrar com o calendario.
-  
-    // create and show the notification
-    const showNotification = () => {
-        const notification = new Notification('Prova daqui à uma semana!', {
-            body: 'Clique aqui para acessar o Moodle!',
-            icon: 'https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/moodle_logo.png?v=1681734171368'
-        });
+  // TODO: Integrar com o calendario.
 
-        // close the notification after 20 seconds
-        setTimeout(() => {
-            notification.close();
-        }, 20 * 1000);
+  // create and show the notification
+  const showNotification = () => {
+    const notification = new Notification("Prova daqui à uma semana!", {
+      body: "Clique aqui para acessar o Moodle!",
+      icon: "https://cdn.glitch.global/f9cb10ab-76aa-4d91-9c68-15589ae1640c/moodle_logo.png?v=1681734171368",
+    });
 
-        // navigate to a URL when clicked
-        notification.addEventListener('click', () => {
-            //link Moodle
-            window.open('https://moodle.ufabc.edu.br/my/', '_blank');
-        });
-    }
+    // close the notification after 20 seconds
+    setTimeout(() => {
+      notification.close();
+    }, 20 * 1000);
 
-    // Mensagem de erro
-    const showError = () => {
-        const error = document.querySelector('.error');
-        error.style.display = 'block';
-        error.textContent = 'Notificações desabilitadas.';
-    }
+    // navigate to a URL when clicked
+    notification.addEventListener("click", () => {
+      //link Moodle
+      window.open("https://moodle.ufabc.edu.br/my/", "_blank");
+    });
+  };
 
-    // check notification permission
-    let granted = false;
+  // Mensagem de erro
+  const showError = () => {
+    const error = document.querySelector(".error");
+    error.style.display = "block";
+    error.textContent = "Notificações desabilitadas.";
+  };
 
-    //Setar permissões em notificações.
-    if (Notification.permission === 'granted') {
-        granted = true;
-    } else if (Notification.permission !== 'denied') {
-        let permission = await Notification.requestPermission();
-        granted = permission === 'granted' ? true : false;
-    }
-  
-    // show notification or error
-    if (granted === true) showNotification();
-    else showError();
+  // check notification permission
+  let granted = false;
 
+  //Setar permissões em notificações.
+  if (Notification.permission === "granted") {
+    granted = true;
+  } else if (Notification.permission !== "denied") {
+    let permission = await Notification.requestPermission();
+    granted = permission === "granted" ? true : false;
+  }
+
+  // show notification or error
+  if (granted === true) showNotification();
+  else showError();
 })();
