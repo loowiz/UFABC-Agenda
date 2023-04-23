@@ -11,7 +11,7 @@
         // close the notification after 15 seconds
         setTimeout(() => {
             notification.close();
-        }, 15 * 1000);
+        }, 20 * 1000);
 
         // navigate to a URL when clicked
         notification.addEventListener('click', () => {
