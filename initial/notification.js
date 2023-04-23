@@ -1,7 +1,8 @@
 //test!
 //console.log("OK");
 
-/*function event_check () {
+/*
+function event_check () {
     //console.log(document);
     const event_type = "/initial/index.html".getElementById("BCC24");    
 
