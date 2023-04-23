@@ -1,13 +1,13 @@
 //test!
+//console.log("OK");
 
-function event_check () {
-    console.log("OK");
-    const event_type = "/initial/index.html".getElementById("BCC24");
-    console.log(document);
+/*function event_check () {
+    //console.log(document);
+    const event_type = "/initial/index.html".getElementById("BCC24");    
 
     if (event_type === "BCC24") console.log("OK");
     else console.log("NOT OK");
-}
+}*/
 
 (async () => {
     // TODO: Integrar com o calendario.
@@ -31,7 +31,7 @@ function event_check () {
         });
     }
 
-    // show an error message
+    // Mensagem de erro
     const showError = () => {
         const error = document.querySelector('.error');
         error.style.display = 'block';
@@ -48,7 +48,7 @@ function event_check () {
         let permission = await Notification.requestPermission();
         granted = permission === 'granted' ? true : false;
     }
-
+  
     // show notification or error
     if (granted === true) showNotification();
     else showError();
