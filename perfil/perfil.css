@@ -13,66 +13,6 @@ header {
 }
 
 
-
-
-
-
-.responsive-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.left-column {
-  flex-basis: 100%;
-}
-
-.right-column {
-  flex-basis: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  .left-column {
-    flex-basis: 50%;
-    padding-right: 10px;
-  }
-
-  .right-column {
-    flex-basis: 50%;
-    padding-left: 10px;
-  }
-}
-
-.image-column {
-  flex-basis: 100%;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.image-column img {
-  max-width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #img-menu {
   margin-left: 10px;
   margin-right: 0;
