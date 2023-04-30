@@ -1,10 +1,7 @@
-function event_check () {
+/*function event_check () {
     //console.log(document);
-    const event_type = document.getElementById("BCC24");    
-
-    if (event_type === "BCC24") console.log("OK");
-    else console.log("NOT OK");
-}
+    const event_type = document.getElementById("BCC24");
+}*/
 
 (async () => {
   // TODO: Integrar com o calendario.
