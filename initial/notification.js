@@ -1,15 +1,10 @@
-//test!
-//console.log("OK");
-
-console.log(document);
-/*
 function event_check () {
     //console.log(document);
     const event_type = document.getElementById("BCC24");    
 
     if (event_type === "BCC24") console.log("OK");
     else console.log("NOT OK");
-}*/
+}
 
 (async () => {
   // TODO: Integrar com o calendario.
@@ -31,13 +26,6 @@ function event_check () {
     });
   };
 
-  // Mensagem de erro
-  const showError = () => {
-    const error = document.querySelector(".error");
-    error.style.display = "block";
-    error.textContent = "Notificações desabilitadas.";
-  };
-
   let granted = false;
 
   //Setar permissões em notificações.
@@ -49,5 +37,4 @@ function event_check () {
   }
 
   if (granted === true) showNotification();
-  else showError();
 })();
